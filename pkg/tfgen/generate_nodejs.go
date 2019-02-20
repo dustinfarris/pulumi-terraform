@@ -606,10 +606,6 @@ func (g *nodeJSGenerator) emitResourceType(mod *module, res *resourceType) (stri
 	w.Writefmtln("")
 	g.emitPlainOldType(w, res.argst, true /*wrapInput*/)
 
-	// Emit the result type for querying.
-	w.Writefmtln("")
-	g.emitPlainOldType(w, res.resultt, false /*wrapInput*/)
-
 	return file, nil
 }
 
